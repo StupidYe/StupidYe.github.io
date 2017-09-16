@@ -6,24 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>小毛驴的博客</title>
+  <title>Liunx驱动学习 | 小毛驴的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我是来做个测试的额你好吗？">
+  <meta name="description" content="0.前言​    在Linux2.6版本之后注册字符设备有新的接口了，新的接口使用dev_t 类型来描述设备号，dev_t 是32位的数值类型，其中高12位表示主设备号，低20位表示次设备号。 typedef __kernel_dev_t    dev_t; typedef __u32 __kernel_dev_t;">
+<meta name="keywords" content="linux,驱动,tag3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小毛驴的博客">
-<meta property="og:url" content="http://yoursite.com/2017/09/15/123/index.html">
+<meta property="og:title" content="Liunx驱动学习">
+<meta property="og:url" content="http://yoursite.com/year/09/16/0.前言/index.html">
 <meta property="og:site_name" content="小毛驴的博客">
-<meta property="og:description" content="我是来做个测试的额你好吗？">
+<meta property="og:description" content="0.前言​    在Linux2.6版本之后注册字符设备有新的接口了，新的接口使用dev_t 类型来描述设备号，dev_t 是32位的数值类型，其中高12位表示主设备号，低20位表示次设备号。 typedef __kernel_dev_t    dev_t; typedef __u32 __kernel_dev_t;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-14T16:28:47.728Z">
+<meta property="og:updated_time" content="2017-09-16T05:37:53.844Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小毛驴的博客">
-<meta name="twitter:description" content="我是来做个测试的额你好吗？">
+<meta name="twitter:title" content="Liunx驱动学习">
+<meta name="twitter:description" content="0.前言​    在Linux2.6版本之后注册字符设备有新的接口了，新的接口使用dev_t 类型来描述设备号，dev_t 是32位的数值类型，其中高12位表示主设备号，低20位表示次设备号。 typedef __kernel_dev_t    dev_t; typedef __u32 __kernel_dev_t;">
   
     <link rel="alternative" href="/atom.xml" title="小毛驴的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/backgroud.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.507b3a.css">
   <style type="text/css">
@@ -43,15 +44,17 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #66ffff"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="" class="profilepic">
-			<img src="/img/touxiang.png" class="js-avatar">
+			<img src="/img/touxiang.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="">StupidYe</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">小毛驴的个人博客</p>
 		
 
 		<nav class="header-menu">
@@ -61,20 +64,12 @@
 	        
 				<li><a href="/archives">概览</a></li>
 	        
-				<li><a href="/categories/进阶">进阶</a></li>
-	        
-				<li><a href="/categories/随笔/">随笔</a></li>
-	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -87,39 +82,35 @@
 				
 					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="jianshu" target="_blank" href="#" title="jianshu"><i class="icon-jianshu"></i></a>
 		        
 			</div>
 		</nav>
-	</header>		
+	</header>
 </div>
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #66ffff"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/img/touxiang.png" class="js-avatar">
+				<img src="/img/touxiang.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">StupidYe</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>小毛驴的个人博客<i class="icon icon-quo-right"></i></p>
 			
 			
-				
-			
-				
 			
 				
 			
@@ -132,26 +123,20 @@
 					
 						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="jianshu" target="_blank" href="#" title="jianshu"><i class="icon-jianshu"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/archives">概览</a></li>
-		        
-					<li style="width: 25%"><a href="/categories/进阶">进阶</a></li>
-		        
-					<li style="width: 25%"><a href="/categories/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/archives">概览</a></li>
 		        
 				</ul>
 			</nav>
@@ -166,12 +151,53 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-123" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-0.前言" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Liunx驱动学习
+    </h1>
+  
+
+        
+        <a href="/year/09/16/0.前言/" class="archive-article-date">
+  	<time datetime="2017-09-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="我是来做个测试的额"><a href="#我是来做个测试的额" class="headerlink" title="我是来做个测试的额"></a>我是来做个测试的额</h4><h6 id="你好吗？"><a href="#你好吗？" class="headerlink" title="你好吗？"></a>你好吗？</h6>
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">文章目录</strong>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-前言"><span class="toc-text">0.前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-获取设备号"><span class="toc-text">1.获取设备号</span></a></li></ol>
+</div>
+
+        <h3 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h3><p>​    在Linux2.6版本之后注册字符设备有新的接口了，新的接口使用dev_t 类型来描述设备号，dev_t 是32位的数值类型，其中高12位表示主设备号，低20位表示次设备号。</p>
+<p><code>typedef __kernel_dev_t    dev_t;</code></p>
+<p><code>typedef __u32 __kernel_dev_t;</code></p>
+<a id="more"></a>
+<h3 id="1-获取设备号"><a href="#1-获取设备号" class="headerlink" title="1.获取设备号"></a>1.获取设备号</h3><ul>
+<li><p>Linux内核中使用两个宏定义来获取主设备号和从设备号</p>
+<ul>
+<li><p>MAJOR</p>
+<p><code>#define MINORBITS    20</code></p>
+<p><code>#define MAJOR(dev)    ((unsigned int) ((dev) &gt;&gt; MINORBITS))</code></p>
+</li>
+</ul>
+<ul>
+<li><p>MINJOR</p>
+<p><code>#define MINORMASK    ((1U &lt;&lt; MINORBITS) - 1)</code></p>
+<p><code>#define MINOR(dev)    ((unsigned int) ((dev) &amp; MINORMASK))</code></p>
+</li>
+</ul>
+</li>
+</ul>
+
       
 
       
@@ -184,7 +210,7 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>我不喜欢吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
                     
@@ -200,6 +226,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">驱动</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tag3</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -250,7 +295,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/15/123/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/year/09/16/0.前言/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -262,6 +307,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/year/09/16/123/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          测试文件
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -276,33 +335,26 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-前言"><span class="toc-number">1.</span> <span class="toc-text">0.前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-获取设备号"><span class="toc-number">2.</span> <span class="toc-text">1.获取设备号</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
 
   
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="123" data-title="" data-url="http://yoursite.com/2017/09/15/123/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
 
-  
-  
   
 
   
@@ -371,14 +423,13 @@ MathJax.Hub.Queue(function() {
 </script>
 
 
+
+
+
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
     
-    
-      
-      
-      
     
       
       
@@ -394,15 +445,11 @@ MathJax.Hub.Queue(function() {
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -421,6 +468,22 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">驱动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tag3</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -466,43 +529,11 @@ MathJax.Hub.Queue(function() {
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">嗨!&lt;br&gt;我是张氏小毛驴~&lt;br&gt;术业有专攻，闻道有先后&lt;br&gt;如是而已！</div>
   	  	
     	</section>
     
