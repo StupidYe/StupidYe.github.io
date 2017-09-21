@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: tag3 | 小毛驴的博客</title>
+  <title>Docker安装步骤记录 | 小毛驴的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小毛驴的博客">
-<meta property="og:url" content="http://yoursite.com/tags/tag3/index.html">
+  <meta name="description" content="0.前言​    最近接触了Docker，需要学习Docker的相关知识，也拜读了一些书，现在记录下我在学习过程中对Docker安装的步骤和使用阿里云加速器的方法。">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker安装步骤记录">
+<meta property="og:url" content="http://yoursite.com/year/09/21/Docker安装步骤记录/index.html">
 <meta property="og:site_name" content="小毛驴的博客">
+<meta property="og:description" content="0.前言​    最近接触了Docker，需要学习Docker的相关知识，也拜读了一些书，现在记录下我在学习过程中对Docker安装的步骤和使用阿里云加速器的方法。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-21T15:58:27.732Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小毛驴的博客">
+<meta name="twitter:title" content="Docker安装步骤记录">
+<meta name="twitter:description" content="0.前言​    最近接触了Docker，需要学习Docker的相关知识，也拜读了一些书，现在记录下我在学习过程中对Docker安装的步骤和使用阿里云加速器的方法。">
   
     <link rel="alternative" href="/atom.xml" title="小毛驴的博客" type="application/atom+xml">
   
@@ -146,68 +151,228 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Docker安装步骤记录" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/year/09/16/0.前言/" class="archive-article-date">
-  	<time datetime="2017-09-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/year/09/16/0.前言/">Liunx驱动学习</a>
+    <h1 class="article-title" itemprop="name">
+      Docker安装步骤记录
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/year/09/21/Docker安装步骤记录/" class="archive-article-date">
+  	<time datetime="2017-09-20T16:21:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+       <!--Table of Contents begin-->
+ 
+<div id="toc" class="toc-article">
+  <strong class="toc-title">文章目录</strong>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-前言"><span class="toc-text">0.前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Docker安装前提"><span class="toc-text">1.Docker安装前提</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Docker安装"><span class="toc-text">2.Docker安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-验证安装是否成功"><span class="toc-text">3.验证安装是否成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-使用阿里云加速器"><span class="toc-text">4.使用阿里云加速器</span></a></li></ol>
+</div>
+
+  <!--Table of Contents end -->
+        <h3 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h3><p>​    最近接触了Docker，需要学习Docker的相关知识，也拜读了一些书，现在记录下我在学习过程中对Docker安装的步骤和使用阿里云加速器的方法。</p>
+<a id="more"></a>
+<h3 id="1-Docker安装前提"><a href="#1-Docker安装前提" class="headerlink" title="1.Docker安装前提"></a>1.Docker安装前提</h3><ul>
+<li>ubuntu系统必须是1204或者更高版本。</li>
+<li>ubuntu系统必须是64位的。</li>
+<li>系统运行的是Linux3.8或者跟高版本的内核</li>
+</ul>
+<h3 id="2-Docker安装"><a href="#2-Docker安装" class="headerlink" title="2.Docker安装"></a>2.Docker安装</h3><p>​    本次安装使用的是Ubuntu14.04,64位系统。</p>
+<ul>
+<li><p>更新源</p>
+<p><code>sudo apt-get update</code></p>
+<p>更新源经常会出现问题，大多是源的问题。可以百度解决。</p>
+<p>建议自己装一个虚拟机，一般装好的直接update是没问题的。</p>
+</li>
+<li><p>apt支持https</p>
+<p><code>sudo apt-get install apt-transport-https</code></p>
+</li>
+<li><p>将Docker库的公钥加入到本地apt中</p>
+<p><code>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80  --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9</code> </p>
+</li>
+<li><p>再将安装源加入到apt源中，并更新和安装</p>
+<p><code>sudo sh -c &quot;echo deb https://get.docker.com/ubuntu docker main &gt; /etc/apt/sources.list.d/docker.list &quot;</code></p>
+<p><code>sudo apt-get update</code></p>
+<p><code>sudo apt-get install lxc-docker</code></p>
+</li>
+</ul>
+<h3 id="3-验证安装是否成功"><a href="#3-验证安装是否成功" class="headerlink" title="3.验证安装是否成功"></a>3.验证安装是否成功</h3><p>​    验证安装Docker是否成功，可以使用命令测试下：<code>sudo docker info</code></p>
+<p>​    有可能后出现一个错误：<code>Cannot connect to the Docker daemon. Is &#39;docker -d&#39; running on this host?</code> </p>
+<p>​    解决方法：启动docker服务 <code>sudo service docker start</code></p>
+<p>​    再使用docker info测试，如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Containers: 0</div><div class="line"> Running: 0</div><div class="line"> Paused: 0</div><div class="line"> Stopped: 0</div><div class="line">Images: 0</div><div class="line">Server Version: 17.05.0-ce</div><div class="line">Storage Driver: aufs</div><div class="line"> Root Dir: /var/lib/docker/aufs</div><div class="line"> Backing Filesystem: extfs</div><div class="line"> Dirs: 0</div><div class="line"> Dirperm1 Supported: <span class="literal">true</span></div><div class="line">Logging Driver: json-file</div><div class="line">Cgroup Driver: cgroupfs</div><div class="line"><span class="built_in">..</span><span class="built_in">..</span><span class="built_in">..</span></div><div class="line"><span class="built_in">..</span><span class="built_in">..</span><span class="built_in">..</span></div></pre></td></tr></table></figure>
+<p>​    说明安装成功。</p>
+<h3 id="4-使用阿里云加速器"><a href="#4-使用阿里云加速器" class="headerlink" title="4.使用阿里云加速器"></a>4.使用阿里云加速器</h3><p>​    使用docker下载镜像时候，国内的速度太慢了….</p>
+<p>​    推荐使用<a href="https://cr.console.aliyun.com/#/accelerator" target="_blank" rel="external">阿里云加速器</a>。</p>
+<p>​    登录账号（没有就自己注册一个）</p>
+<p>​    然后根据网页下的做法，复制命令到Ubuntu上执行更新docker版本。</p>
+<p>​    完成后，再用docker info验证，可能会出现一个错误，具体报错为客户端的API版本高于服务端</p>
+<p>​    <code>Error response from daemon: client and server don’t have same version</code> </p>
+<p>​    解决方法：重启Ubuntu。</p>
+<p>​    之后下载镜像速度会得到飞跃的提高~~</p>
+<p>​    </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>我不喜欢吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">驱动</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tag3</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/year/09/21/Docker安装步骤记录/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/year/09/17/Markdown语法学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Markdown语法学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-前言"><span class="toc-number">1.</span> <span class="toc-text">0.前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Docker安装前提"><span class="toc-number">2.</span> <span class="toc-text">1.Docker安装前提</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Docker安装"><span class="toc-number">3.</span> <span class="toc-text">2.Docker安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-验证安装是否成功"><span class="toc-number">4.</span> <span class="toc-text">3.验证安装是否成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-使用阿里云加速器"><span class="toc-number">5.</span> <span class="toc-text">4.使用阿里云加速器</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -230,9 +395,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
