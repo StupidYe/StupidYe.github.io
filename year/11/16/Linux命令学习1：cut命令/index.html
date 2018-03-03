@@ -205,7 +205,7 @@
 </ul>
 <h4 id="cut命令的3种方式"><a href="#cut命令的3种方式" class="headerlink" title="cut命令的3种方式"></a>cut命令的3种方式</h4><ul>
 <li><p>以字符为单位进行处理</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">root@ubuntu:~# who</div><div class="line">zzy      tty7         2017-09-28 11:20 (:0)</div><div class="line"></div><div class="line"><span class="meta">#</span>截取第一个字符</div><div class="line">root@ubuntu:~# who | cut -c 1</div><div class="line">z</div><div class="line"><span class="meta">#</span>截取第一个到第十个之间所有的字符</div><div class="line">root@ubuntu:~# who | cut -c 1-10</div><div class="line">zzy      t</div><div class="line"><span class="meta">#</span>截取第一个和第十个字符</div><div class="line">root@ubuntu:~# who | cut -c 1,10</div><div class="line">zt</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">root@ubuntu:~# who</div><div class="line">zzy      tty7         2017-09-28 11:20 (:0)</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">截取第一个字符</span></div><div class="line">root@ubuntu:~# who | cut -c 1</div><div class="line">z</div><div class="line"><span class="meta">#</span><span class="bash">截取第一个到第十个之间所有的字符</span></div><div class="line">root@ubuntu:~# who | cut -c 1-10</div><div class="line">zzy      t</div><div class="line"><span class="meta">#</span><span class="bash">截取第一个和第十个字符</span></div><div class="line">root@ubuntu:~# who | cut -c 1,10</div><div class="line">zt</div></pre></td></tr></table></figure>
 <blockquote>
 <p>注意：-c选项是截取第几个字符，其中“-”表示一个区间，“。”表示的是单个字符。</p>
 </blockquote>
@@ -216,7 +216,7 @@
 <li><p>以自定义字符为单位进行处理</p>
 <ul>
 <li><p>以:为分隔符</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">root@ubuntu:~# echo $PATH</div><div class="line">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games</div><div class="line"></div><div class="line"><span class="meta">#</span>以冒号为分隔符，截取第五个位置数据</div><div class="line">root@ubuntu:~# echo $PATH | cut -d: -f5</div><div class="line">/sbin</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">root@ubuntu:~# echo $PATH</div><div class="line">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">以冒号为分隔符，截取第五个位置数据</span></div><div class="line">root@ubuntu:~# echo $PATH | cut -d: -f5</div><div class="line">/sbin</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -492,7 +492,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -504,7 +504,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tag3</a>
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -516,19 +520,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
               </li>
             
             <div class="clearfix"></div>
