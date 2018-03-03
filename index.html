@@ -148,20 +148,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-ubuntu部署kubernetes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Ubunntu遇到的问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/year/10/16/ubuntu部署kubernetes/">ubuntu/centos部署kubernetes.md</a>
+      <a class="article-title" href="/year/03/03/Ubunntu遇到的问题/">Ubunntu遇到的问题</a>
     </h1>
   
 
         
-        <a href="/year/10/16/ubuntu部署kubernetes/" class="archive-article-date">
-  	<time datetime="2017-10-16T14:19:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-16</time>
+        <a href="/year/03/03/Ubunntu遇到的问题/" class="archive-article-date">
+  	<time datetime="2018-03-03T14:59:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-03</time>
 </a>
         
       </header>
@@ -171,6 +171,95 @@
        <!--Table of Contents begin-->
  
   <!--Table of Contents end -->
+        <h3 id="Ubuntu问题1：”Ubuntu-is-running-in-low-graphics-mode”"><a href="#Ubuntu问题1：”Ubuntu-is-running-in-low-graphics-mode”" class="headerlink" title="Ubuntu问题1：”Ubuntu is running in low-graphics mode”"></a>Ubuntu问题1：”Ubuntu is running in low-graphics mode”</h3><p>​    有时候无怨无故的开启Ubuntu虚拟机，突然就报这样的错，一开始完全懵逼了~~</p>
+<p>​    以前是直接放弃了那个ubuntu，或者是只使用命令行来操作，现在有了解决方法，已验证是可以的。</p>
+<p>​    不过不同的笔记本可能问题不一定能解决。</p>
+<ul>
+<li><p>步骤</p>
+<ul>
+<li><p>遇到这样子时候，直接按<strong>ctrl+alt+f1</strong> ，这样就可以进入到<strong>命令行</strong> ，进入命令行登录，输入账号密码，一般我忘了用户名，都是直接输入root，在输密码。</p>
+</li>
+<li><p>进入命令行后，输入以下内容</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /etc/X11  </div><div class="line">cp xorg.conf.failsafe xorg.conf</div></pre></td></tr></table></figure>
+</li>
+<li><p>最后reboot重启就可以了。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-awk学习记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/year/11/17/awk学习记录/">awk学习记录</a>
+    </h1>
+  
+
+        
+        <a href="/year/11/17/awk学习记录/" class="archive-article-date">
+  	<time datetime="2017-11-17T05:47:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="0-awk的格式"><a href="#0-awk的格式" class="headerlink" title="0. awk的格式"></a>0. awk的格式</h4><p>awk指令由awk命令、括在引号（或写在文件）中的程序指令以及输入文件的文件名几个部分组成。</p>
+<p>awk指令由模式、操作或模式与操作的组合组成。</p>
+        
+          <a class="article-more-a" href="/year/11/17/awk学习记录/#more">阅读原文 >></a>
         
       
 
@@ -179,6 +268,384 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-sed编辑器学习记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/year/11/17/sed编辑器学习记录/">sed编辑器学习记录</a>
+    </h1>
+  
+
+        
+        <a href="/year/11/17/sed编辑器学习记录/" class="archive-article-date">
+  	<time datetime="2017-11-17T05:47:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="0-sed编辑器"><a href="#0-sed编辑器" class="headerlink" title="0. sed编辑器"></a>0. sed编辑器</h5><p>​    sed命令的格式如下：</p>
+<p>​        <strong>sed</strong> <em>options</em> <em>script</em> <em>file</em> </p>
+<p>​    options选项如下：</p>
+        
+          <a class="article-more-a" href="/year/11/17/sed编辑器学习记录/#more">阅读原文 >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-grep命令学习记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/year/11/17/grep命令学习记录/">grep命令学习记录</a>
+    </h1>
+  
+
+        
+        <a href="/year/11/17/grep命令学习记录/" class="archive-article-date">
+  	<time datetime="2017-11-17T05:44:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="0-grep命令基本用法"><a href="#0-grep命令基本用法" class="headerlink" title="0. grep命令基本用法"></a>0. grep命令基本用法</h4><p>grep的一般格式为：<code>grep [选项][模式] [文件...]</code> </p>
+        
+          <a class="article-more-a" href="/year/11/17/grep命令学习记录/#more">阅读原文 >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ssh与expect学习记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/year/11/17/ssh与expect学习记录/">ssh与expect学习记录</a>
+    </h1>
+  
+
+        
+        <a href="/year/11/17/ssh与expect学习记录/" class="archive-article-date">
+  	<time datetime="2017-11-17T03:55:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h4><p>这是学习shell过程中对于ssh和expect的一些学习记录，不算详细，但是基本的都有，以后接触到有用到再慢慢添加修改。</p>
+        
+          <a class="article-more-a" href="/year/11/17/ssh与expect学习记录/#more">阅读原文 >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Linux命令学习1：cut命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/year/11/16/Linux命令学习1：cut命令/">Linux命令学习1：cut命令</a>
+    </h1>
+  
+
+        
+        <a href="/year/11/16/Linux命令学习1：cut命令/" class="archive-article-date">
+  	<time datetime="2017-11-16T11:59:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="cut命令​介绍"><a href="#cut命令​介绍" class="headerlink" title="cut命令​介绍"></a>cut命令​介绍</h4><p>cut命令是一个选取命令，是处理一行数据的命令。</p>
+<p>​    格式：</p>
+<p>​    <code>cut [-c] file</code>  </p>
+<p>​    <code>cut [-df] file</code> </p>
+<p>​    <code>cut [b] file</code></p>
+        
+          <a class="article-more-a" href="/year/11/16/Linux命令学习1：cut命令/#more">阅读原文 >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-shell脚本学习一些记录总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/year/11/16/shell脚本学习一些记录总结/">shell脚本学习一些记录总结</a>
+    </h1>
+  
+
+        
+        <a href="/year/11/16/shell脚本学习一些记录总结/" class="archive-article-date">
+  	<time datetime="2017-11-16T11:14:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h4><p>这是最近完成shell脚本一键部署kubernetes的学习中，遇到的一些问题一些知识点的记录。</p>
+<p>方便以后学习查看~~</p>
+        
+          <a class="article-more-a" href="/year/11/16/shell脚本学习一些记录总结/#more">阅读原文 >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -431,88 +898,10 @@
 
 
   
-    <article id="post-0.前言" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/year/09/16/0.前言/">Liunx驱动学习</a>
-    </h1>
-  
-
-        
-        <a href="/year/09/16/0.前言/" class="archive-article-date">
-  	<time datetime="2017-09-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h3><p>​    在Linux2.6版本之后注册字符设备有新的接口了，新的接口使用dev_t 类型来描述设备号，dev_t 是32位的数值类型，其中高12位表示主设备号，低20位表示次设备号。</p>
-<p><code>typedef __kernel_dev_t    dev_t;</code></p>
-<p><code>typedef __u32 __kernel_dev_t;</code></p>
-        
-          <a class="article-more-a" href="/year/09/16/0.前言/#more">阅读原文 >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">驱动</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tag3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -523,7 +912,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 StupidYe
+    		&copy; 2018 StupidYe
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -622,6 +1011,10 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
@@ -634,10 +1027,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
@@ -646,7 +1035,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
             
             <div class="clearfix"></div>

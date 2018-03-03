@@ -6,27 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的软件列表 | 小毛驴的博客</title>
+  <title>Linux命令学习1：cut命令 | 小毛驴的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言​    这是我个人觉得比较好用的软件列表，一些通用的我就没有列举了，以后有遇到再慢慢添加… ​    如果你们有好的推荐，也可以推荐给我用用~~">
-<meta name="keywords" content="软件">
+  <meta name="description" content="cut命令​介绍cut命令是一个选取命令，是处理一行数据的命令。 ​    格式： ​    cut [-c] file   ​    cut [-df] file  ​    cut [b] file">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的软件列表">
-<meta property="og:url" content="http://yoursite.com/year/09/17/我的软件列表/index.html">
+<meta property="og:title" content="Linux命令学习1：cut命令">
+<meta property="og:url" content="http://yoursite.com/year/11/16/Linux命令学习1：cut命令/index.html">
 <meta property="og:site_name" content="小毛驴的博客">
-<meta property="og:description" content="前言​    这是我个人觉得比较好用的软件列表，一些通用的我就没有列举了，以后有遇到再慢慢添加… ​    如果你们有好的推荐，也可以推荐给我用用~~">
+<meta property="og:description" content="cut命令​介绍cut命令是一个选取命令，是处理一行数据的命令。 ​    格式： ​    cut [-c] file   ​    cut [-df] file  ​    cut [b] file">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://owf8xmj1f.bkt.clouddn.com/17-9-17/42219089.jpg">
-<meta property="og:image" content="http://owf8xmj1f.bkt.clouddn.com/17-9-17/59511400.jpg">
-<meta property="og:image" content="http://owf8xmj1f.bkt.clouddn.com/17-9-17/56718915.jpg">
-<meta property="og:image" content="http://owf8xmj1f.bkt.clouddn.com/17-9-17/16058594.jpg">
-<meta property="og:image" content="http://owf8xmj1f.bkt.clouddn.com/17-9-18/59767412.jpg">
-<meta property="og:image" content="http://owf8xmj1f.bkt.clouddn.com/17-9-17/87786195.jpg">
-<meta property="og:updated_time" content="2017-11-14T16:26:01.482Z">
+<meta property="og:updated_time" content="2018-03-03T15:17:58.688Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的软件列表">
-<meta name="twitter:description" content="前言​    这是我个人觉得比较好用的软件列表，一些通用的我就没有列举了，以后有遇到再慢慢添加… ​    如果你们有好的推荐，也可以推荐给我用用~~">
-<meta name="twitter:image" content="http://owf8xmj1f.bkt.clouddn.com/17-9-17/42219089.jpg">
+<meta name="twitter:title" content="Linux命令学习1：cut命令">
+<meta name="twitter:description" content="cut命令​介绍cut命令是一个选取命令，是处理一行数据的命令。 ​    格式： ​    cut [-c] file   ​    cut [-df] file  ​    cut [b] file">
   
     <link rel="alternative" href="/atom.xml" title="小毛驴的博客" type="application/atom+xml">
   
@@ -158,20 +151,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的软件列表" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux命令学习1：cut命令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的软件列表
+      Linux命令学习1：cut命令
     </h1>
   
 
         
-        <a href="/year/09/17/我的软件列表/" class="archive-article-date">
-  	<time datetime="2017-09-17T11:52:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-17</time>
+        <a href="/year/11/16/Linux命令学习1：cut命令/" class="archive-article-date">
+  	<time datetime="2017-11-16T11:59:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
 </a>
         
       </header>
@@ -182,50 +175,53 @@
  
 <div id="toc" class="toc-article">
   <strong class="toc-title">文章目录</strong>
-<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#笔记篇"><span class="toc-text">笔记篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#播放器"><span class="toc-text">播放器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编辑器"><span class="toc-text">编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他类"><span class="toc-text">其他类</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#cut命令​介绍"><span class="toc-text">cut命令​介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参数说明"><span class="toc-text">参数说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cut命令的3种方式"><span class="toc-text">cut命令的3种方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
 </div>
 
   <!--Table of Contents end -->
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>​    这是我个人觉得比较好用的软件列表，一些通用的我就没有列举了，以后有遇到再慢慢添加…</p>
-<p>​    如果你们有好的推荐，也可以推荐给我用用~~</p>
+        <h4 id="cut命令​介绍"><a href="#cut命令​介绍" class="headerlink" title="cut命令​介绍"></a>cut命令​介绍</h4><p>cut命令是一个选取命令，是处理一行数据的命令。</p>
+<p>​    格式：</p>
+<p>​    <code>cut [-c] file</code>  </p>
+<p>​    <code>cut [-df] file</code> </p>
+<p>​    <code>cut [b] file</code></p>
 <a id="more"></a>
-<h3 id="笔记篇"><a href="#笔记篇" class="headerlink" title="笔记篇"></a>笔记篇</h3><ul>
-<li><p><a href="https://www.yinxiang.com/" target="_blank" rel="external">印象笔记</a></p>
-<p>印象笔记分为两种：国际版和国内版，国内版叫印象笔记，国际版叫Evernote，两者存储是不一样的，使用时要区分开。印象笔记有个缺点就是不支持Markdown语法编辑，这个可以使用其他方法解决。</p>
-<p><img src="http://owf8xmj1f.bkt.clouddn.com/17-9-17/42219089.jpg" alt=""></p>
+<p>​    cut命令是从文件中的<strong>每一行</strong> 进行字节，字符和字段的处理，并将结果输出到标准输出。如果cut命令后面跟file，则会从标准输入中读取数据。</p>
+<h4 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
+<li><p>-b</p>
+<p>以字节为单位进行截取</p>
 </li>
-<li><p><a href="https://leanote.com/" target="_blank" rel="external">蚂蚁笔记</a></p>
-<p>蚂蚁笔记支持Markdown编辑，支持博客，也是一个不错的云笔记，这个我没有亲自用过，有朋友使用，向我推荐，我也就放在这里了。蚂蚁笔记 = 笔记 + 博客 + 协作 + 私有云。</p>
-<p><img src="http://owf8xmj1f.bkt.clouddn.com/17-9-17/59511400.jpg" alt=""></p>
+<li><p>-c</p>
+<p>以字符为单位进行截取</p>
 </li>
-</ul>
-<h3 id="播放器"><a href="#播放器" class="headerlink" title="播放器"></a>播放器</h3><ul>
-<li><p><a href="http://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="external">PotPlayer</a></p>
-<p>PotPlayer拥有强大的内置解码器，内置硬件加速解码，各方面性能都不错。</p>
-<p><img src="http://owf8xmj1f.bkt.clouddn.com/17-9-17/56718915.jpg" alt=""></p>
+<li><p>-d</p>
+<p>自定义分隔符，默认为制表符</p>
 </li>
-</ul>
-<h3 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h3><ul>
-<li><p><a href="https://www.sublimetext.com/" target="_blank" rel="external">Sublime Text</a>  </p>
-<p>最近接触了这个编辑器，感觉相见恨晚。可以使用sublime text的Evernote插件对印象笔记实现用Markdown语法编写，还是蛮不错的。</p>
-<p><img src="http://owf8xmj1f.bkt.clouddn.com/17-9-17/16058594.jpg" alt=""></p>
+<li><p>-f</p>
+<p>与-d一起使用，表示截取哪部分区域</p>
 </li>
-<li><p><a href="https://typora.io/" target="_blank" rel="external">Typora</a></p>
-<p>一款Markdown编辑器，摒弃了传统的交互模式：编辑和预览分开，Typora采用了将代码编辑和预览一体化的效果，为用户带来更加流畅直观的<em>所见即所得</em> 。</p>
-<p><img src="http://owf8xmj1f.bkt.clouddn.com/17-9-18/59767412.jpg" alt=""></p>
+<li><p>-n</p>
+<p>取消分隔多字节字符，与-b一起使用</p>
 </li>
 </ul>
-<h3 id="其他类"><a href="#其他类" class="headerlink" title="其他类"></a>其他类</h3><ul>
-<li><p><a href="https://everything.en.softonic.com/" target="_blank" rel="external">EveryThing</a></p>
-<p>一款文件搜索神器，它的体积很小巧，界面也简洁，搜索速度逆天，比起windows自带的文件搜索功能，无法比拟。</p>
-<p><img src="http://owf8xmj1f.bkt.clouddn.com/17-9-17/87786195.jpg" alt=""></p>
-</li>
-</ul>
-<hr>
+<h4 id="cut命令的3种方式"><a href="#cut命令的3种方式" class="headerlink" title="cut命令的3种方式"></a>cut命令的3种方式</h4><ul>
+<li><p>以字符为单位进行处理</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">root@ubuntu:~# who</div><div class="line">zzy      tty7         2017-09-28 11:20 (:0)</div><div class="line"></div><div class="line"><span class="meta">#</span>截取第一个字符</div><div class="line">root@ubuntu:~# who | cut -c 1</div><div class="line">z</div><div class="line"><span class="meta">#</span>截取第一个到第十个之间所有的字符</div><div class="line">root@ubuntu:~# who | cut -c 1-10</div><div class="line">zzy      t</div><div class="line"><span class="meta">#</span>截取第一个和第十个字符</div><div class="line">root@ubuntu:~# who | cut -c 1,10</div><div class="line">zt</div></pre></td></tr></table></figure>
 <blockquote>
-<p>以上只是我觉得比较不错的软件列表，如果觉得不错可以去下载用用。</p>
-<p>还是那句老话：没有最好的软件，只有最合适的软件。</p>
+<p>注意：-c选项是截取第几个字符，其中“-”表示一个区间，“。”表示的是单个字符。</p>
 </blockquote>
+</li>
+<li><p>以字节为单位进行处理</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">root@ubuntu:~# who</div><div class="line">zzy      tty7         2017-09-28 11:20 (:0)</div><div class="line"></div><div class="line">root@ubuntu:~# who | cut -b 10-</div><div class="line">tty7         2017-09-28 11:20 (:0)</div></pre></td></tr></table></figure>
+</li>
+<li><p>以自定义字符为单位进行处理</p>
+<ul>
+<li><p>以:为分隔符</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">root@ubuntu:~# echo $PATH</div><div class="line">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games</div><div class="line"></div><div class="line"><span class="meta">#</span>以冒号为分隔符，截取第五个位置数据</div><div class="line">root@ubuntu:~# echo $PATH | cut -d: -f5</div><div class="line">/sbin</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>​    cut命令在处理数据上是很方便的，特别是在截取数据上。唯一不好的地方就是对于<strong>空格作为分隔符的情况</strong> 。</p>
 
       
 
@@ -260,7 +256,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
@@ -316,7 +312,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/year/09/17/我的软件列表/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/year/11/16/Linux命令学习1：cut命令/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -330,18 +326,18 @@
   
 <nav id="article-nav">
   
-    <a href="/year/09/17/Markdown语法学习/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/year/11/17/ssh与expect学习记录/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Markdown语法学习
+          ssh与expect学习记录
         
       </div>
     </a>
   
   
-    <a href="/year/09/16/Linux字符设备驱动学习/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Liunx字符设备驱动学习</div>
+    <a href="/year/11/16/shell脚本学习一些记录总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">shell脚本学习一些记录总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -368,7 +364,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#笔记篇"><span class="toc-number">2.</span> <span class="toc-text">笔记篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#播放器"><span class="toc-number">3.</span> <span class="toc-text">播放器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编辑器"><span class="toc-number">4.</span> <span class="toc-text">编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他类"><span class="toc-number">5.</span> <span class="toc-text">其他类</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#cut命令​介绍"><span class="toc-number">1.</span> <span class="toc-text">cut命令​介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参数说明"><span class="toc-number">2.</span> <span class="toc-text">参数说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cut命令的3种方式"><span class="toc-number">3.</span> <span class="toc-text">cut命令的3种方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
                     </div>
                 </span>
             </div>

@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Liunx驱动学习 | 小毛驴的博客</title>
+  <title>Archives: 2017/11 | 小毛驴的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="0.前言​    在Linux2.6版本之后注册字符设备有新的接口了，新的接口使用dev_t 类型来描述设备号，dev_t 是32位的数值类型，其中高12位表示主设备号，低20位表示次设备号。 typedef __kernel_dev_t    dev_t; typedef __u32 __kernel_dev_t;">
-<meta name="keywords" content="linux,驱动,tag3">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Liunx驱动学习">
-<meta property="og:url" content="http://yoursite.com/year/09/16/0.前言/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="小毛驴的博客">
+<meta property="og:url" content="http://yoursite.com/archives/2017/11/index.html">
 <meta property="og:site_name" content="小毛驴的博客">
-<meta property="og:description" content="0.前言​    在Linux2.6版本之后注册字符设备有新的接口了，新的接口使用dev_t 类型来描述设备号，dev_t 是32位的数值类型，其中高12位表示主设备号，低20位表示次设备号。 typedef __kernel_dev_t    dev_t; typedef __u32 __kernel_dev_t;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-16T05:37:53.844Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liunx驱动学习">
-<meta name="twitter:description" content="0.前言​    在Linux2.6版本之后注册字符设备有新的接口了，新的接口使用dev_t 类型来描述设备号，dev_t 是32位的数值类型，其中高12位表示主设备号，低20位表示次设备号。 typedef __kernel_dev_t    dev_t; typedef __u32 __kernel_dev_t;">
+<meta name="twitter:title" content="小毛驴的博客">
   
     <link rel="alternative" href="/atom.xml" title="小毛驴的博客" type="application/atom+xml">
   
@@ -151,219 +146,250 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-0.前言" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Liunx驱动学习
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/year/11/17/awk学习记录/" class="archive-article-date">
+  	<time datetime="2017-11-17T05:47:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/year/11/17/awk学习记录/">awk学习记录</a>
     </h1>
   
 
-        
-        <a href="/year/09/16/0.前言/" class="archive-article-date">
-  	<time datetime="2017-09-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-       <!--Table of Contents begin-->
- 
-<div id="toc" class="toc-article">
-  <strong class="toc-title">文章目录</strong>
-<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-前言"><span class="toc-text">0.前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-获取设备号"><span class="toc-text">1.获取设备号</span></a></li></ol>
-</div>
-
-  <!--Table of Contents end -->
-        <h3 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h3><p>​    在Linux2.6版本之后注册字符设备有新的接口了，新的接口使用dev_t 类型来描述设备号，dev_t 是32位的数值类型，其中高12位表示主设备号，低20位表示次设备号。</p>
-<p><code>typedef __kernel_dev_t    dev_t;</code></p>
-<p><code>typedef __u32 __kernel_dev_t;</code></p>
-<a id="more"></a>
-<h3 id="1-获取设备号"><a href="#1-获取设备号" class="headerlink" title="1.获取设备号"></a>1.获取设备号</h3><ul>
-<li><p>Linux内核中使用两个宏定义来获取主设备号和从设备号</p>
-<ul>
-<li><p>MAJOR</p>
-<p><code>#define MINORBITS    20</code></p>
-<p><code>#define MAJOR(dev)    ((unsigned int) ((dev) &gt;&gt; MINORBITS))</code></p>
-</li>
-</ul>
-<ul>
-<li><p>MINJOR</p>
-<p><code>#define MINORMASK    ((1U &lt;&lt; MINORBITS) - 1)</code></p>
-<p><code>#define MINOR(dev)    ((unsigned int) ((dev) &amp; MINORMASK))</code></p>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>我不喜欢吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">驱动</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tag3</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/year/09/16/0.前言/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/year/09/17/我的软件列表/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          我的软件列表
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/year/11/17/sed编辑器学习记录/" class="archive-article-date">
+  	<time datetime="2017-11-17T05:47:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
         </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-前言"><span class="toc-number">1.</span> <span class="toc-text">0.前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-获取设备号"><span class="toc-number">2.</span> <span class="toc-text">1.获取设备号</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/year/11/17/sed编辑器学习记录/">sed编辑器学习记录</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
         </div>
-        
-    </div>
-</aside>
-
-
-
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/year/11/17/grep命令学习记录/" class="archive-article-date">
+  	<time datetime="2017-11-17T05:44:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/year/11/17/grep命令学习记录/">grep命令学习记录</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/year/11/17/ssh与expect学习记录/" class="archive-article-date">
+  	<time datetime="2017-11-17T03:55:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/year/11/17/ssh与expect学习记录/">ssh与expect学习记录</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/year/11/16/Linux命令学习1：cut命令/" class="archive-article-date">
+  	<time datetime="2017-11-16T11:59:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/year/11/16/Linux命令学习1：cut命令/">Linux命令学习1：cut命令</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/year/11/16/shell脚本学习一些记录总结/" class="archive-article-date">
+  	<time datetime="2017-11-16T11:14:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/year/11/16/shell脚本学习一些记录总结/">shell脚本学习一些记录总结</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
   
+  
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -373,7 +399,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 StupidYe
+    		&copy; 2018 StupidYe
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -386,8 +412,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -472,6 +498,10 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
@@ -484,10 +514,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
@@ -496,7 +522,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
             
             <div class="clearfix"></div>
